@@ -2,13 +2,13 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const DEFAULT_CONFIG = window.RAFFLE_CONFIG || {
-    whatsappUrl: "https://wa.me/9198633316313?text=Hi!%20I%20would%20like%20to%20purchase%20tickets%20for%20the%20Friends%20Raffle%20Draw.",
-    contactNumber: "98633316313"
+    whatsappUrl: "https://wa.me/919863316313?text=Hi!%20I%20would%20like%20to%20purchase%20tickets%20for%20the%20Friends%20Raffle%20Draw.",
+    contactNumber: "9863316313"
   };
 
-  // Check saved WhatsApp URL or phone (reset if previously had 9310650945)
+  // Check saved WhatsApp URL or phone (reset if previously cached with old wrong number)
   let savedTarget = localStorage.getItem("raffle_whatsapp_target");
-  if (savedTarget && savedTarget.includes("9310650945")) {
+  if (savedTarget && (savedTarget.includes("9310650945") || savedTarget.includes("98633316313"))) {
     localStorage.removeItem("raffle_whatsapp_target");
     savedTarget = null;
   }
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Settings Modal Handlers
   function openSettings() {
     if (whatsappPhoneInput && !whatsappPhoneInput.value) {
-      whatsappPhoneInput.value = "98633316313";
+      whatsappPhoneInput.value = "9863316313";
     }
     if (customUrlInput) customUrlInput.value = currentWhatsAppUrl || "";
     if (settingsModal) settingsModal.classList.remove("hidden");
