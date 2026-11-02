@@ -1,0 +1,111 @@
+/* Warm Minimal Editorial Theme: Cream / Olive / Terracotta / Burnt Orange */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Warm Base Colors */
+  --bg-cream: #FAF7F2;
+  --bg-beige: #F1ECE1;
+  --bg-warm-white: #FFFFFF;
+  --bg-card: #FFFFFF;
+  
+  /* Secondary Palette */
+  --olive-deep: #283618;
+  --olive-light: #606C38;
+  --terracotta: #BC6C25;
+  --terracotta-dark: #9B501B;
+  --terracotta-soft: #DDA15E;
+  
+  /* Accent Palette */
+  --burnt-orange: #C85A32;
+  --burnt-orange-hover: #B04B25;
+  --soft-pink: #F5EBE6;
+  --sage: #A3B18A;
+  --sage-light: #E9ECE5;
+  
+  /* Neutral Typography */
+  --text-primary: #1D201D;
+  --text-secondary: #585C54;
+  --text-muted: #82877D;
+  --border-subtle: #E4DEC3;
+  --border-warm: #E2DBD0;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-cream);
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.font-serif {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Big Warm Purchase Button */
+.btn-purchase-main {
+  background-color: var(--burnt-orange);
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  box-shadow: 0 4px 20px -2px rgba(200, 90, 50, 0.35);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-purchase-main:hover {
+  background-color: var(--burnt-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px -2px rgba(200, 90, 50, 0.45);
+}
+
+.btn-purchase-main:active {
+  transform: scale(0.98);
+}
+
+/* Secondary Olive Button */
+.btn-olive {
+  background-color: var(--olive-deep);
+  color: #FAF7F2;
+  transition: all 0.2s ease;
+}
+
+.btn-olive:hover {
+  background-color: #1f2714;
+}
+
+/* Editorial rule card */
+.rule-card {
+  background-color: var(--bg-warm-white);
+  border: 1px solid var(--border-warm);
+  border-radius: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rule-card:hover {
+  border-color: var(--terracotta-soft);
+  box-shadow: 0 8px 24px -6px rgba(40, 54, 24, 0.06);
+}
+
+/* Number badge */
+.num-badge {
+  background-color: var(--soft-pink);
+  color: var(--terracotta-dark);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+/* Modal styles */
+.modal-overlay {
+  background: rgba(29, 32, 29, 0.6);
+  backdrop-filter: blur(6px);
+}

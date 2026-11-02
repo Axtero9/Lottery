@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Friends Event Raffle Draw 2026</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome for clean subtle icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Custom Warm Editorial Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="selection:bg-[#BC6C25] selection:text-white">
+
+  <!-- TOP BAR -->
+  <header class="border-b border-[#E4DEC3] bg-[#FAF7F2]/90 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-[#606C38]"></span>
+        <span class="text-xs uppercase tracking-widest font-mono font-medium text-[#283618]">
+          Friends Raffle &bull; 2026
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs font-medium">
+        <a href="#rules" class="text-[#585C54] hover:text-[#283618] transition-colors hidden sm:inline">Rules & Details</a>
+        <a href="#prizes" class="text-[#585C54] hover:text-[#283618] transition-colors hidden sm:inline">Prizes</a>
+        <button id="open-settings-btn" class="px-2.5 py-1 rounded-md border border-[#E2DBD0] text-[#585C54] hover:text-[#283618] hover:border-[#606C38] transition-colors text-[11px] font-mono">
+          <i class="fa-solid fa-gear mr-1"></i> WhatsApp Link
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="pt-16 pb-14 px-6 sm:px-8 border-b border-[#E4DEC3] bg-[#FAF7F2]">
+    <div class="max-w-3xl mx-auto text-center space-y-6">
+      
+      <!-- Event Tag -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F5EBE6] text-[#9B501B] text-xs font-mono tracking-wide">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#BC6C25]"></span>
+        <span>Local Friends Gathering Event</span>
+      </div>
+
+      <!-- Main Headline in Fraunces Serif -->
+      <h1 class="font-serif text-4xl sm:text-6xl text-[#1D201D] font-normal tracking-tight leading-[1.15]">
+        The 2026 Friends <br />
+        <span class="italic text-[#BC6C25]">Raffle Draw.</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-[#585C54] max-w-xl mx-auto font-normal leading-relaxed">
+        A private community raffle for our friend circle. Read the rules and conditions below, then grab your ticket via WhatsApp.
+      </p>
+
+      <!-- Key Numbers Strip -->
+      <div class="pt-2 flex items-center justify-center gap-6 sm:gap-10 text-xs font-mono uppercase tracking-wider text-[#585C54]">
+        <div>
+          <span class="block text-2xl sm:text-3xl font-serif text-[#283618] font-normal normal-case">₹50</span>
+          <span>Per Ticket</span>
+        </div>
+        <div class="w-px h-8 bg-[#E2DBD0]"></div>
+        <div>
+          <span class="block text-2xl sm:text-3xl font-serif text-[#BC6C25] font-normal normal-case">₹2,300</span>
+          <span>Total Pool</span>
+        </div>
+        <div class="w-px h-8 bg-[#E2DBD0]"></div>
+        <div>
+          <span class="block text-2xl sm:text-3xl font-serif text-[#283618] font-normal normal-case">3</span>
+          <span>Cash Prizes</span>
+        </div>
+      </div>
+
+      <!-- THE BIG "PURCHASE NOW" BUTTON (HERO) -->
+      <div class="pt-6 max-w-md mx-auto">
+        <a id="hero-purchase-btn" href="#" target="_blank" class="btn-purchase-main w-full py-4 px-8 rounded-xl text-base sm:text-lg flex items-center justify-center gap-3 shadow-lg group">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          <span>Purchase Now</span>
+          <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </a>
+        <p class="text-[12px] text-[#82877D] mt-2.5 font-mono">
+          Connects via WhatsApp to reserve your ticket with the organizer
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRIZES SECTION -->
+  <section id="prizes" class="py-16 px-6 sm:px-8 bg-[#F1ECE1] border-b border-[#E4DEC3]">
+    <div class="max-w-3xl mx-auto">
+      
+      <div class="flex items-center justify-between mb-8 pb-3 border-b border-[#D8D1C3]">
+        <h2 class="text-xs uppercase font-mono tracking-widest text-[#283618] font-semibold">Prize Distribution</h2>
+        <span class="text-xs font-mono text-[#585C54]">Cash / UPI Transfer</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        
+        <!-- 1st Prize -->
+        <div class="bg-white p-6 rounded-2xl border-2 border-[#BC6C25] shadow-sm relative overflow-hidden flex flex-col justify-between">
+          <div class="space-y-1 mb-4">
+            <span class="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-[#F5EBE6] text-[#9B501B] font-bold">1st Prize</span>
+            <div class="text-xs text-[#82877D]">Grand Winner</div>
+          </div>
+          <div>
+            <div class="font-serif text-4xl sm:text-5xl text-[#283618] font-normal tracking-tight">₹1,000</div>
+            <div class="text-xs text-[#585C54] mt-1 font-mono">Cash prize payout</div>
+          </div>
+        </div>
+
+        <!-- 2nd Prize -->
+        <div class="bg-white p-6 rounded-2xl border border-[#E2DBD0] shadow-sm flex flex-col justify-between">
+          <div class="space-y-1 mb-4">
+            <span class="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-[#E9ECE5] text-[#283618] font-bold">2nd Prize</span>
+            <div class="text-xs text-[#82877D]">Runner Up</div>
+          </div>
+          <div>
+            <div class="font-serif text-4xl sm:text-5xl text-[#283618] font-normal tracking-tight">₹800</div>
+            <div class="text-xs text-[#585C54] mt-1 font-mono">Cash prize payout</div>
+          </div>
+        </div>
+
+        <!-- 3rd Prize -->
+        <div class="bg-white p-6 rounded-2xl border border-[#E2DBD0] shadow-sm flex flex-col justify-between">
+          <div class="space-y-1 mb-4">
+            <span class="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-[#F5EBE6] text-[#585C54] font-bold">3rd Prize</span>
+            <div class="text-xs text-[#82877D]">Third Place</div>
+          </div>
+          <div>
+            <div class="font-serif text-4xl sm:text-5xl text-[#283618] font-normal tracking-tight">₹500</div>
+            <div class="text-xs text-[#585C54] mt-1 font-mono">Cash prize payout</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAIN CENTERPIECE: COMPREHENSIVE RULES & CONDITIONS -->
+  <section id="rules" class="py-20 px-6 sm:px-8 bg-[#FAF7F2]">
+    <div class="max-w-3xl mx-auto space-y-12">
+      
+      <!-- Section Header -->
+      <div class="text-left space-y-2 border-b border-[#E4DEC3] pb-6">
+        <span class="text-xs uppercase font-mono tracking-widest text-[#BC6C25] font-semibold block">Official Guidelines</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#1D201D] font-normal">
+          Important Notes & Conditions
+        </h2>
+        <p class="text-sm text-[#585C54] leading-relaxed">
+          Please read through each of the following rules carefully before purchasing your ticket. All participants are held to these guidelines to ensure a fair and enjoyable event.
+        </p>
+      </div>
+
+      <!-- Rules Detailed Breakdown (6 Main Rule Cards) -->
+      <div class="space-y-6">
+
+        <!-- Rule 1: Registration Details -->
+        <div class="rule-card p-6 sm:p-7 flex gap-5 items-start">
+          <div class="num-badge w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base">
+            01
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-base font-semibold text-[#1D201D]">Full Name & Contact Information</h3>
+            <p class="text-sm text-[#585C54] leading-relaxed">
+              When purchasing a ticket, you <strong>must provide your full name and an active phone number / WhatsApp contact</strong>. This information is directly attached to your assigned ticket serial number and will be used as the sole identifier when drawing and contacting winners.
+            </p>
+            <div class="text-xs text-[#606C38] font-mono flex items-center gap-1.5 pt-1">
+              <i class="fa-solid fa-check"></i> Verified directly upon WhatsApp ticket confirmation.
+            </div>
+          </div>
+        </div>
+
+        <!-- Rule 2: Non-Refundable & Non-Transferable -->
+        <div class="rule-card p-6 sm:p-7 flex gap-5 items-start">
+          <div class="num-badge w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base">
+            02
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-base font-semibold text-[#1D201D]">Non-Refundable & Non-Transferable</h3>
+            <p class="text-sm text-[#585C54] leading-relaxed">
+              <strong>Tickets once purchased are strictly non-refundable and non-transferable.</strong> Because ticket proceeds form the fixed prize pool, tickets cannot be cancelled, exchanged, or transferred to another individual after issuance.
+            </p>
+            <div class="text-xs text-[#9B501B] font-mono flex items-center gap-1.5 pt-1">
+              <i class="fa-solid fa-shield-halved"></i> Protects the integrity and fixed funding of the prize pool.
+            </div>
+          </div>
+        </div>
+
+        <!-- Rule 3: Draw Announcement -->
+        <div class="rule-card p-6 sm:p-7 flex gap-5 items-start">
+          <div class="num-badge w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base">
+            03
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-base font-semibold text-[#1D201D]">Draw Date Announcement</h3>
+            <p class="text-sm text-[#585C54] leading-relaxed">
+              The exact date and time of the raffle draw will be officially announced to all registered participants <strong>once all ticket slots have been filled</strong>. Notifications will be shared directly with each participant.
+            </p>
+          </div>
+        </div>
+
+        <!-- Rule 4: Deadline -->
+        <div class="rule-card p-6 sm:p-7 flex gap-5 items-start border-l-4 border-l-[#BC6C25]">
+          <div class="num-badge w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base">
+            04
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-base font-semibold text-[#1D201D]">Draw Deadline</h3>
+            <p class="text-sm text-[#585C54] leading-relaxed">
+              The draw will be conducted <strong>on or before 30th November 2026</strong>. If all tickets are allocated prior to this date, the draw date may be scheduled earlier with advance notice to all ticket holders.
+            </p>
+            <div class="inline-block px-2.5 py-1 rounded bg-[#F1ECE1] text-[#283618] text-xs font-mono font-medium">
+              Conducted by: 30 November 2026
+            </div>
+          </div>
+        </div>
+
+        <!-- Rule 5: Random Selection Procedure -->
+        <div class="rule-card p-6 sm:p-7 flex gap-5 items-start">
+          <div class="num-badge w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base">
+            05
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-base font-semibold text-[#1D201D]">Fair & Transparent Random Draw</h3>
+            <p class="text-sm text-[#585C54] leading-relaxed">
+              Winners will be selected strictly through a <strong>random, transparent draw</strong>. Each ticket has an equal probability of winning. The draw will take place either in-person at the friends gathering or via a recorded/livestreamed randomizer so all participants can audit the results.
+            </p>
+            <div class="text-xs text-[#585C54] font-mono pt-1">
+              Order of draw: 3rd Prize (₹500) &rarr; 2nd Prize (₹800) &rarr; 1st Prize (₹1,000).
+            </div>
+          </div>
+        </div>
+
+        <!-- Rule 6: Contacting Winners & Instant Settlement -->
+        <div class="rule-card p-6 sm:p-7 flex gap-5 items-start">
+          <div class="num-badge w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base">
+            06
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-base font-semibold text-[#1D201D]">Winner Notification & Cash Payout</h3>
+            <p class="text-sm text-[#585C54] leading-relaxed">
+              Winners will be contacted immediately following the draw using the <strong>phone number provided at the time of purchase</strong>. Cash prizes will be transferred via direct UPI (Google Pay, PhonePe, Paytm) or cash handover within 24 hours.
+            </p>
+          </div>
+        </div>
+
+        <!-- Rule 7: Organizer Discretion -->
+        <div class="rule-card p-6 sm:p-7 flex gap-5 items-start">
+          <div class="num-badge w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base">
+            07
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-base font-semibold text-[#1D201D]">Organiser’s Final Decision</h3>
+            <p class="text-sm text-[#585C54] leading-relaxed">
+              The <strong>organiser's decision regarding the conduct, timing, winner verification, and final outcome of the draw will be final and binding</strong>. By purchasing a ticket, participants agree in good faith to honor these terms.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FAQ / Clarifications for Friends -->
+      <div class="pt-8 border-t border-[#E4DEC3] space-y-6">
+        <h3 class="text-xs uppercase font-mono tracking-widest text-[#283618] font-semibold">
+          Common Questions & Clarifications
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-[#585C54]">
+          <div class="p-4 rounded-xl bg-[#F1ECE1] space-y-1.5">
+            <div class="font-semibold text-[#1D201D]">Can I buy more than one ticket?</div>
+            <p>Yes. You can purchase multiple tickets. Each ticket receives its own distinct entry, proportionately increasing your chances.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#F1ECE1] space-y-1.5">
+            <div class="font-semibold text-[#1D201D]">How do I get my ticket number?</div>
+            <p>Once you message the organizer via WhatsApp and confirm payment, your unique ticket serial number will be sent to you directly.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#F1ECE1] space-y-1.5">
+            <div class="font-semibold text-[#1D201D]">What if I miss the live draw?</div>
+            <p>You don't need to be present during the draw. If your ticket number is drawn, the organizer will phone and message you directly.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#F1ECE1] space-y-1.5">
+            <div class="font-semibold text-[#1D201D]">How will I receive the prize money?</div>
+            <p>Direct instant bank transfer via UPI (GPay, PhonePe, Paytm) or physical cash immediately upon winner verification.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM GIANT "PURCHASE NOW" BANNER -->
+  <section class="py-16 px-6 sm:px-8 bg-[#283618] text-[#FAF7F2] border-t border-[#1D201D]">
+    <div class="max-w-2xl mx-auto text-center space-y-6">
+      <span class="text-xs uppercase font-mono tracking-widest text-[#DDA15E]">Ready to participate?</span>
+      
+      <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal">
+        Secure your raffle ticket today.
+      </h2>
+      
+      <p class="text-sm text-[#A3B18A] max-w-md mx-auto leading-relaxed">
+        Tickets are ₹50 each. Send a quick message on WhatsApp to reserve your number with the organizer.
+      </p>
+
+      <!-- BIG PURCHASE NOW BUTTON -->
+      <div class="pt-4">
+        <a id="footer-purchase-btn" href="#" target="_blank" class="btn-purchase-main inline-flex items-center justify-center gap-3 py-4 px-10 rounded-xl text-lg w-full sm:w-auto shadow-xl group">
+          <i class="fa-brands fa-whatsapp text-2xl"></i>
+          <span>Purchase Now</span>
+          <span class="group-hover:translate-x-1.5 transition-transform">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="pt-2 text-xs text-[#A3B18A] font-mono">
+        Thank you for your participation and good luck!
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 px-6 sm:px-8 bg-[#FAF7F2] border-t border-[#E4DEC3] text-xs text-[#82877D]">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div>
+        Friends Event Raffle &bull; Conducted on or before 30 Nov 2026.
+      </div>
+      <div class="flex items-center gap-4">
+        <button id="footer-settings-btn" class="hover:text-[#283618] underline font-mono text-[11px]">
+          Edit WhatsApp Link
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP LINK SETTINGS MODAL -->
+  <div id="settings-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay hidden">
+    <div class="bg-white border border-[#E2DBD0] rounded-2xl max-w-md w-full p-6 sm:p-7 space-y-5 shadow-2xl">
+      <div class="flex justify-between items-center pb-3 border-b border-[#E4DEC3]">
+        <div class="flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-[#25D366] text-lg"></i>
+          <h3 class="text-sm font-semibold text-[#1D201D]">Configure WhatsApp Purchase Link</h3>
+        </div>
+        <button id="close-settings-btn" class="text-[#82877D] hover:text-[#1D201D] text-lg">&times;</button>
+      </div>
+
+      <p class="text-xs text-[#585C54] leading-relaxed">
+        Enter your WhatsApp phone number or custom link. Both <strong>"Purchase Now"</strong> buttons will immediately redirect here.
+      </p>
+
+      <div class="space-y-3">
+        <div>
+          <label class="block text-xs font-mono uppercase text-[#585C54] mb-1">WhatsApp Phone Number</label>
+          <div class="flex">
+            <span class="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-[#E2DBD0] bg-[#F1ECE1] text-xs font-mono text-[#585C54]">+91</span>
+            <input type="tel" id="whatsapp-phone-input" placeholder="9876543210" class="w-full px-3.5 py-2.5 rounded-r-lg border border-[#E2DBD0] text-sm focus:outline-none focus:border-[#BC6C25]" />
+          </div>
+          <span class="text-[11px] text-[#82877D] mt-1 block">Or enter full custom link below:</span>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono uppercase text-[#585C54] mb-1">Custom URL (Optional)</label>
+          <input type="text" id="custom-url-input" placeholder="https://wa.me/..." class="w-full px-3.5 py-2 rounded-lg border border-[#E2DBD0] text-xs font-mono focus:outline-none focus:border-[#BC6C25]" />
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-3 border-t border-[#E4DEC3]">
+        <button id="save-settings-btn" class="btn-purchase-main px-5 py-2.5 rounded-lg text-xs font-semibold">
+          Save Link
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
