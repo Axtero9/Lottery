@@ -40,7 +40,7 @@ The website places the full event guidelines at its core:
 4. Both **"Purchase Now"** buttons will instantly redirect participants to your WhatsApp chat with a pre-filled ticket request message.
 
 ### Method 2: In [`config.js`](./config.js)
-Update `whatsappUrl` with your number:
+The default WhatsApp number is set to `9310650945` (`+91 9310650945`):
 ```javascript
-whatsappUrl: "https://wa.me/91YOURNUMBER?text=Hi!%20I%20would%20like%20to%20purchase%20tickets%20for%20the%20Friends%20Raffle%20Draw."
+whatsappUrl: "https://wa.me/919310650945?text=Hi!%20I%20would%20like%20to%20purchase%20tickets%20for%20the%20Friends%20Raffle%20Draw."
 ```

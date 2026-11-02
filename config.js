@@ -21,7 +21,8 @@ const RAFFLE_CONFIG = {
    * You can replace this with your phone number anytime:
    * e.g. "https://wa.me/919876543210?text=Hi!%20I%20would%20like%20to%20purchase%20tickets%20for%20the%20Friends%20Raffle%20Draw"
    */
-  whatsappUrl: "https://wa.me/?text=Hi!%20I%20would%20like%20to%20purchase%20tickets%20for%20the%20Friends%20Raffle%20Draw.",
+  contactNumber: "9310650945",
+  whatsappUrl: "https://wa.me/919310650945?text=Hi!%20I%20would%20like%20to%20purchase%20tickets%20for%20the%20Friends%20Raffle%20Draw.",
 
   // Draw deadline
   deadline: "30th November 2026"
