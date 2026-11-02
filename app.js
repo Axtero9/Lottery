@@ -2,12 +2,17 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const DEFAULT_CONFIG = window.RAFFLE_CONFIG || {
-    whatsappUrl: "https://wa.me/919310650945?text=Hi!%20I%20would%20like%20to%20purchase%20tickets%20for%20the%20Friends%20Raffle%20Draw.",
-    contactNumber: "9310650945"
+    whatsappUrl: "https://wa.me/9198633316313?text=Hi!%20I%20would%20like%20to%20purchase%20tickets%20for%20the%20Friends%20Raffle%20Draw.",
+    contactNumber: "98633316313"
   };
 
-  // Check saved WhatsApp URL or phone
-  let currentWhatsAppUrl = localStorage.getItem("raffle_whatsapp_target") || (window.RAFFLE_CONFIG && window.RAFFLE_CONFIG.whatsappUrl) || DEFAULT_CONFIG.whatsappUrl;
+  // Check saved WhatsApp URL or phone (reset if previously had 9310650945)
+  let savedTarget = localStorage.getItem("raffle_whatsapp_target");
+  if (savedTarget && savedTarget.includes("9310650945")) {
+    localStorage.removeItem("raffle_whatsapp_target");
+    savedTarget = null;
+  }
+  let currentWhatsAppUrl = savedTarget || (window.RAFFLE_CONFIG && window.RAFFLE_CONFIG.whatsappUrl) || DEFAULT_CONFIG.whatsappUrl;
 
   const heroPurchaseBtn = document.getElementById("hero-purchase-btn");
   const footerPurchaseBtn = document.getElementById("footer-purchase-btn");
@@ -31,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Settings Modal Handlers
   function openSettings() {
     if (whatsappPhoneInput && !whatsappPhoneInput.value) {
-      whatsappPhoneInput.value = "9310650945";
+      whatsappPhoneInput.value = "98633316313";
     }
     if (customUrlInput) customUrlInput.value = currentWhatsAppUrl || "";
     if (settingsModal) settingsModal.classList.remove("hidden");
@@ -58,8 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let finalUrl = "";
       if (phone) {
-        const countryCode = phone.length === 10 ? "91" : "";
-        finalUrl = `https://wa.me/${countryCode}${phone}?text=Hi!%20I%20would%20like%20to%20purchase%20tickets%20for%20the%20Friends%20Raffle%20Draw.`;
+        let digits = phone;
+        if (!digits.startsWith("91")) {
+          digits = "91" + digits;
+        }
+        finalUrl = `https://wa.me/${digits}?text=Hi!%20I%20would%20like%20to%20purchase%20tickets%20for%20the%20Friends%20Raffle%20Draw.`;
       } else if (customUrl) {
         finalUrl = customUrl;
       } else {
